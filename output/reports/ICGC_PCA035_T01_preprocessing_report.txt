@@ -1,0 +1,152 @@
+============================================================
+DPCLUST PREPROCESSING REPORT
+============================================================
+Sample: ICGC_PCA035_T01
+Execution date: 2026-11-16T19:02:46
+============================================================
+Selected files:
+VCF: C:\Users\User\Desktop\UNIVERSIDAD\Special course Francesco\tumor-evolution-project\data\PCA035\somatic_snv\snvs_ICGC_PCA035_T01_somatic_snvs_conf_8_to_10.vcf.gz
+Segments: C:\Users\User\Desktop\UNIVERSIDAD\Special course Francesco\tumor-evolution-project\data\copy_numbers\ICGC_PCA035_T01\ICGC_PCA035_T01_segments_clusters.txt
+CCF: C:\Users\User\Desktop\UNIVERSIDAD\Special course Francesco\tumor-evolution-project\data\copy_numbers\ICGC_PCA035_T01\ICGC_PCA035_T01_mutations_ccf.txt.gz
+Purity: C:\Users\User\Desktop\UNIVERSIDAD\Special course Francesco\tumor-evolution-project\data\copy_numbers\ICGC_PCA035_T01\ICGC_PCA035_T01_confints_CP.txt
+
+Dataset summary:
+VCF variants: 2293
+Sequenza CCF records: 2532
+Copy-number segments: 192
+Purity: 0.14 [0.14, 0.14]
+
+Somatic SNVs: 2127
+
+Mutation matching:
+_merge
+both          1518
+left_only      609
+right_only       0
+Name: count, dtype: int64
+Match rate: 71.37%
+
+Copy-number matching:
+Mutations with subCNt: 2113
+Mutations without subCNt: 14
+
+==================================================
+PREPROCESSING SUMMARY
+==================================================
+Sample: ICGC_PCA035_T01
+Purity: 0.14
+Somatic SNVs: 2127
+Matched mutations: 1518
+Unmatched mutations: 609
+Match rate: 71.37%
+
+DPClust input:
+Complete mutations: 1512
+Excluded mutations: 615
+
+Exclusion reasons:
+exclusion_reason
+No matching Sequenza mutation    609
+Invalid numerical value            6
+Name: count, dtype: int64
+
+CCF values above 1: 355
+
+Mutation copy number comparison:
+count    1512.000000
+mean        2.562341
+std         0.853614
+min         0.948719
+25%         1.897437
+50%         2.443669
+75%         3.121591
+max         7.168097
+Name: MCN_difference, dtype: float64
+
+Preview of DPClust input:
+chr      end  WT.count  mut.count  subclonal.CN  mutation.copy.number  subclonal.fraction  no.chrs.bearing.mut    phase
+  1  4358804        19          8           2.0              1.046983            1.046983                  1.0 unphased
+  1  5134430        33         18           2.0              1.247142            1.247142                  1.0 unphased
+  1 10218247        23         10           2.0              1.070778            1.070778                  1.0 unphased
+  1 10455896        27          8           2.0              0.807673            0.807673                  1.0 unphased
+  1 10579512        27         11           2.0              1.022875            1.022875                  1.0 unphased
+
+Output files saved in:
+C:\Users\User\Desktop\UNIVERSIDAD\Special course Francesco\tumor-evolution-project\output\dpclust_inputs
+
+Generated input: ICGC_PCA035_T01_dp_input.txt
+Check master_file.txt before running DPClust.
+
+VAF comparison:
+               VAF            F
+count  1512.000000  1512.000000
+mean      0.244213     0.244194
+std       0.087129     0.087134
+min       0.100000     0.100000
+25%       0.179258     0.179000
+50%       0.232558     0.233000
+75%       0.296296     0.296000
+max       0.882353     0.882000
+
+Absolute VAF differences:
+count    1512.000000
+mean        0.000231
+std         0.000152
+min         0.000000
+25%         0.000103
+50%         0.000231
+75%         0.000333
+max         0.000500
+Name: VAF_difference, dtype: float64
+
+MCN difference using Sequenza VAF:
+count    1512.000000
+mean        2.562075
+std         0.853671
+min         0.945357
+25%         1.890715
+50%         2.439773
+75%         3.116982
+max         7.172859
+Name: MCN_Sequenza_difference, dtype: float64
+
+Detailed mutation comparison:
+chr      end      VAF     F  CNn  CNt  subCNt      CCF  Mt  mutation.copy.number  MCN_from_VAF  MCN_from_Sequenza_VAF
+  1  4358804 0.296296 0.296  2.0  2.0     2.0 1.046983 1.0              1.046983      4.232804               4.228571
+  1  5134430 0.352941 0.353  2.0  2.0     2.0 1.247142 1.0              1.247142      5.042017               5.042857
+  1 10218247 0.303030 0.303  2.0  2.0     2.0 1.070778 1.0              1.070778      4.329004               4.328571
+  1 10455896 0.228571 0.229  2.0  2.0     2.0 0.807673 1.0              0.807673      3.265306               3.271429
+  1 10579512 0.289474 0.289  2.0  2.0     2.0 1.022875 1.0              1.022875      4.135338               4.128571
+  1 11414530 0.171429 0.171  2.0  2.0     2.0 0.605755 1.0              0.605755      2.448980               2.442857
+  1 11508561 0.322581 0.323  2.0  2.0     2.0 1.139861 1.0              1.139861      4.608295               4.614286
+  1 14124016 0.108696 0.109  2.0  2.0     2.0 0.384084 1.0              0.384084      1.552795               1.557143
+  1 15359951 0.192308 0.192  2.0  2.0     2.0 0.679532 1.0              0.679532      2.747253               2.742857
+  1 15441226 0.171429 0.171  2.0  2.0     2.0 0.605755 1.0              0.605755      2.448980               2.442857
+
+Implied purity in diploid regions:
+Number of mutations: 1352
+count    1.352000e+03
+mean     5.660000e-01
+std      7.268430e-16
+min      5.660000e-01
+25%      5.660000e-01
+50%      5.660000e-01
+75%      5.660000e-01
+max      5.660000e-01
+Name: implied_purity, dtype: float64
+
+Reported purity: 0.14
+Median implied purity: 0.5660000000000001
+
+Sequenza alternative solutions:
+ cellularity  ploidy         SLPP
+        0.14     5.5 9.979287e-01
+        0.13     4.5 1.430405e-35
+        0.11     6.4 5.091616e-37
+        0.16     3.6 6.873006e-38
+        0.12     6.2 3.133970e-39
+        0.26     1.8 2.419813e-70
+        0.15     2.6 1.013606e-89
+
+STATUS: PREPROCESSING COMPLETED
+Input consistency must be reviewed before DPClust execution.
