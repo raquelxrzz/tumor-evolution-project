@@ -15,17 +15,18 @@ REPO_DIR = Path(__file__).resolve().parents[1]
 
 # Input and output directories
 DATA_DIR = REPO_DIR / "data"
-OUTPUT_DIR = REPO_DIR / "output" / "dpclust_inputs"
+RESULTS_DIR = REPO_DIR / "results" / "preprocessing"
 
+OUTPUT_DIR = RESULTS_DIR / "dpclust_inputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Sample to process
 SAMPLE = "ICGC_PCA035_T01"
 
-
 # Sample-specific preprocessing report (overwritten on each run)
-REPORT_DIR = REPO_DIR / "output" / "reports"
+REPORT_DIR = RESULTS_DIR / "reports"
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
 REPORT_PATH = REPORT_DIR / f"{SAMPLE}_preprocessing_report.txt"
 
 
